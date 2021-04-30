@@ -1,0 +1,326 @@
+<html>
+<body>
+
+  
+<p style="color: red;;"> CHANGING CONTENT OF HTML USING ID SINGLE CLICK AND DBL CLICK</p>
+<p id="pp" class="pp">HELLO TAYYAB</p>
+
+<button type="button" onclick="document.getElementById('pp').innerHTML ='TAYYAB' "
+ ondblclick="document.getElementById('pp').innerHTML ='TAYYAB ASLAMMMM' ">
+ Click Me! 
+</button>
+
+<hr>
+<p style="color: red;;"> CHANGING STYLE</p>
+<h3 id="hh" class="pp">DATA</h3>
+<button type="button" onclick="document.getElementById('hh').style.display ='none' ">
+  HIDE ME
+</button>
+
+<button type="button" 
+ondblclick="document.getElementById('hh').style.fontSize ='250px' "
+
+onclick="document.getElementById('hh').style.fontSize ='15px' ">
+change size
+</button>
+
+<hr>
+
+<p style="color: red;;">FUNTION</p>
+<!-- FUNTION CALL -->
+<h3 id="aa" >MY DATA</h3>
+<button type="button" onclick="fun()" >PRESS ME TO CALL FUNTION</button>
+
+<script>
+function fun(){
+    alert('i am called');
+}
+
+
+</script>
+
+<hr>
+
+<p style="color: red;;"> CONSOLE CHECK</p>
+<script>
+var x=100;
+document.write(x);
+console.log(x);
+
+</script>
+
+<hr>
+
+<p style="color: red;;"> consolse check addition</p>
+<script>
+var a=2 + 2;
+document.write(a);
+</script>
+
+
+<hr>
+
+<!-- CONCETINATION DIFFERENT OCCUR ALWAYS FROM START -->
+<p style="color: red;;"> CONCETINATION DIFFERENT OCCUR ALWAYS FROM START</p>
+<script>
+var b= 2 + 2 + "5";
+document.write(b);
+</script>
+<hr>
+<script>
+    var b= "1" + 2;
+    document.write(b);
+    </script>
+<hr>
+
+<!-- BOOLEAN -->
+]
+<script>
+var xx=5;
+var yy=5;
+var zz=(xx==yy)
+document.write(zz);
+
+document.write(typeof(xx));
+
+
+</script>
+
+<hr>
+<script>
+document.write(typeof(zz));
+</script>
+<hr><hr>
+<!-- OBJECT IN JS -->
+
+<p style="color:red ;">OBJECTS IN JS</p>
+<script>
+var person={
+name:"tyb",
+age:"22",
+
+
+}
+document.write(person["name"]);
+</script>
+
+<hr>
+<p id="oo">I AM TEXT</p>
+
+<button onclick="document.getElementById('oo').style.color='red' ">PRESS ME</button>
+
+<button onmouseover="displayDate()" onmouseout="display()" >The time is?</button>
+<hr>
+<script>
+function displayDate() {
+    document.getElementById("demo").style.color='red';   
+  document.getElementById("demo").innerHTML = Date();
+}
+
+function display() {
+  document.getElementById("demo").style.color='white';
+}
+
+
+
+</script>
+
+<p id="demo"></p>
+
+
+<script>
+var car={
+  type:"auto",
+  company:"honda",
+  tyres:4,
+  owner:"tayyab",
+   dummy: function() {
+    return this.company + " with tyre= " + this.tyres;
+  }
+}
+
+console.log(car);
+
+console.log(car.dummy());
+</script>
+
+
+<!-------------------------AGAIN PREPARE---------------------> 
+
+<p style="color:red ;">STRINGS</p>
+
+<script>
+var str = "Please locate where 'locate' occurs!";
+var pos = str.search("locate");
+document.write(pos);
+</script>
+<hr>
+<script>
+str = "Please visit Microsoft!";
+var n = str.replace("Microsoft", "W3Schools");
+document.write(str);
+</script>
+
+<p style="color:red;">NUMBERS </p>
+<script>
+var x = 123;
+document.write(x);
+document.write(typeof(x));
+
+//CONVERT TO STRING
+document.write(typeof(x.toString()));
+
+
+</script>
+
+
+<p style="color:red;">ARRAY'S </p>
+
+<hr><hr><hr>
+
+
+<script>
+
+var student=new Array("student1","student2","student3");
+
+document.write(student);
+</script>
+
+<br><br>
+<script>
+
+  var fruits=new Array("mango","apple");
+  fruits.push("Lemon");  
+  fruits.push("apple");
+  fruits.push("apple");
+  fruits.pop();  
+  document.write(fruits);
+  </script>
+  <br><br>
+<script>
+var names=["tyb","aslm","rana"];
+document.write(names);
+names.toString();
+document.write(typeof(names.toString()));
+
+</script>
+
+
+<hr><hr>
+
+<script>
+var myGirls = ["Cecilie", "Lone"];
+var myBoys = ["Emil", "Tobias", "Linus"];
+
+myGirls.push('hina');
+
+document.write(myGirls);
+</script>
+<hr>
+<script>
+var myChildren = myGirls.concat(myBoys); 
+
+document.write(myChildren);
+
+</script>
+<p style="color:red ;">RANDOM AND BOOLEAN</p>
+  <hr><hr>
+
+<script>
+document.write(Math.random());
+var dd=2;
+var ff=3;
+var gg =Boolean(dd<ff);
+console.log(gg);
+</script>
+
+<script>
+  age=100;
+var voteable = (age < 18) ? "Too young":"Old enough";
+console.log(voteable);
+</script>
+
+<p style="color:red ;">SWITCH</p>
+  <hr><hr>
+
+<script>
+
+var text;
+var x = "1";
+
+switch (x) {
+  case 0:
+    text = "Off";
+    break;
+  case 1:
+    text = "On";
+    break;
+  default:
+    text = "No value found";
+}
+
+
+document.write(text);
+
+
+</script>
+
+
+
+
+
+<P style="color:red;;">ES6 FUNTION</P>
+
+<script>
+
+
+//<!-----ES6 FUNTIONS----->
+
+
+sayhello = (name)=>{
+
+document.write('my name is '+ name);
+}
+
+sayhello('john wick');
+
+</script>
+
+<P style="color:red;">THIS KEYWORD</P>
+<script>
+var tayyab={
+name:"tayyab aslam",
+age:22,
+ph:123,
+cnic: function (){
+  return this.name + 'ch';
+}
+
+}
+
+document.write(tayyab.cnic());
+
+</script>
+
+
+
+<button onclick="this.style.fontSize='50px'">PRESS ME</button>
+
+
+<p style="color:red;">EC6 ARROW FUNCTION</p>
+
+<script>
+
+calculate=(x,y)=>{
+
+  document.write(x+y);
+}
+
+calculate(2,8);
+</script>
+</body>
+</html> 
+
+
+
+

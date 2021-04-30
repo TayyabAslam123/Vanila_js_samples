@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+ <p style="color: red;">DOM (DOCUMENT OBJECT MODEL)</p>   
+ <p style="color: red;">GETELEMENTBY IS METHOD, INNERHTML OR STYLE IS PROPERTY</p>   
+<!--START CODING NOW-->
+
+<h1  id="h1">
+ THIS IS MY TEXT.   
+</h1>
+<button onclick=changeName()>
+ PRESS ME TO CHANGE NAME   
+</button>
+
+<h1 class="h2">
+THIS IS MY TEXT.   
+</h1>
+
+<button onclick=changeHtml()>
+    PRESS ME TO CHANGE NAME   
+   </button>
+   
+   <script>
+    console.log(document.all[7]);
+    </script>
+<!-- <script>
+document.getElementById("bb").style.color="green";
+</script>
+
+<script>
+document.getElementsByClassName("aa").style.color="green";
+</script>
+     -->
+<script>
+    changeName=()=>{var h1=document.getElementById('h1');
+    h1.innerHTML="<h1>TAYYAB ASLAM</h1><p>dsadasfassfabibdisdbg</p>";
+    h1.style.color="red";
+    }
+    
+    changeHtml=()=>{
+
+      var a=document.getElementById('h2').innerHTML="<h1>TAYYAB ASLAM</h1>";   
+      
+    }
+</script>
+
+
+<h1 id="ss">
+THIS IS SOME TEXT   
+</h1>
+
+<script>
+document.getElementById('ss').innerHTML="<p>HELLO WORLD</p>";
+document.getElementById('ss').style.border="solid 5px";
+ </script>
+
+
+<p>----------------------------------------------------------------------</p>
+
+
+<table id="ty" class="mytable">
+  <tr style="background-color: darkgray;">
+    <th>Company</th>
+    <th>Contact</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+    <td>Mexico</td>
+  </tr>
+ 
+</table>
+<script>
+  var wah=document.getElementById('ty');
+  wah.style.color.hover="red";
+</script>
+
+
+<p class="LO" style="color:green;">MY NAM IS TAYYAB</p>
+<P class="LO" style="color:green;">MY ANDABDADADAD</P>
+
+<script>
+  var q=document.querySelector("table");
+ console.log(q);
+ var q=document.querySelector(".LO");
+ console.log(q);
+</script>
+<!--IN QUERY SELECTOR U CAN WRITE ANY THING .class,#id,tagname-->
+<p style="color:red">-----------------------------------------------------------------------------------</p>
+
+
+<div style="background-color:lightblue;" class="parent">
+<ol class="items">
+<li>orange</li>
+<li>apple</li>
+<li>mango</li>
+</ol>
+</div>
+
+
+<script>
+  var z=document.querySelector('.items');
+  console.log(z.parentNode);
+  z.style.color='white';
+</script>
+
+<script>
+  var z=document.querySelector('.parent');
+  console.log(z.children);
+
+</script>
+
+<!--CREATE A ELEMENT-->
+
+<script>
+  var newdiv=document.createElement('div');
+  newdiv.className='div1';
+  newdiv.id='divid';
+  var texts=document.createTextNode('hello tayyab aslam');
+  newdiv.appendChild(texts);
+  console.log(newdiv);
+  var q=document.querySelector(".mytable");
+  console.log(q);
+
+  // q.insertRow(newdiv);
+</script> 
+              
+<script>
+  var newdiv2=document.createElement('div');
+  newdiv2.className='div2';
+  newdiv2.id='divid2';
+  var texts=document.createTextNode('this is div 2222');
+  newdiv2.appendChild(texts);
+  console.log(newdiv2);
+  var q=document.querySelector(".LO");
+  console.log(q);
+ q.append(newdiv2);
+  
+</script>
+
+</body>
+</html>

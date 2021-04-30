@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html>
+<body>
+
+    <form id="form1" class="form-inline mb-3">
+
+        <input type="text" class="form-control mr-2" id="info">
+        <input type="submit" class="btn btn-dark" value="Submit">
+        
+    </form>
+
+
+<div id="mydata" style="background-color: darkkhaki;">
+<h3>MY TODO LIST</h3>
+
+<ol id="mylist">
+</ol>
+
+    <script>
+    var myform=document.querySelector('#form1');
+    myform.addEventListener('submit',addmore);
+
+    var del=document.querySelector('#mylist');
+    
+    del.addEventListener('click',removeItem);
+
+
+    function addmore(e){
+      
+        e.preventDefault();
+        console.log(e);
+        var newdata=document.querySelector('#info').value;
+        var target=document.getElementById('mylist');
+        
+        var inform=document.createElement('li');
+        inform.append(document.createTextNode(newdata));
+
+        var mybtn=document.createElement('button');
+         mybtn.innerText="X";
+         mybtn.style.margin="10px";
+         mybtn.className = 'imp';
+        inform.append(mybtn);
+        target.append(inform);
+
+  }
+
+
+  function removeItem(e){
+     console.log(e);
+  if(e.target.classList.contains('imp')){
+    if(confirm('Are You Sure?')){
+      var li = e.target.parentElement;
+      del.removeChild(li);
+    }
+  }
+}
+
+    </script>
+
+</div>
+
+<hr><hr>
+
+
+<div style="width: 50px;height:100px;background-color: lightcoral;" id="vo">
+ <button id="v" >
+     1
+ </button>
+ 
+ <button id="v" >
+    2
+</button>
+
+<button id="v">
+    3
+</button
+</div>
+<script>
+ var vv=document.getElementById('vo');
+
+ vv.addEventListener('click',e=>{
+    console.log(e.target.innerText);  
+ });
+
+// function calll(a){
+   
+// console.log(a);
+    
+//      // del.removeChild(li);
+// // var info=document.getElementById('v');
+// // console.log(info.innerText);
+// }
+function cal(e){
+    
+  
+console.log(e.target.innerText);
+}
+
+
+</script>
+
+
+
+
+
+<script>
+    //TRY CATCH 
+//let json = '{ "name":"John", "age":30, "city":"New York"}';
+
+let json='{name:tayyab}';
+console.log(json);
+try {
+
+
+  let user = JSON.parse(json); // <-- when an error occurs...
+  console.log(user);
+  console.log(user.name);
+  alert( user.name ); // doesn't work
+
+} catch (e) {
+  // ...the execution jumps here
+  alert( "Our apologies, the data has errors, we'll try to request it one more time." );
+  alert( e.name );
+  alert( e.message );
+  alert(e.stack);
+}
+
+
+window.innerHeight="50px";
+</script>
+
+
+</body>
+
+</html>

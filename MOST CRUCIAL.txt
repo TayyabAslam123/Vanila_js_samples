@@ -1,0 +1,31 @@
+# NORMAL BASICS
+# LET (CAN BE CHANGED)
+# CONST( CANNOT)
+# HOISTING (KAHIN BHI DEFINE KAHINN BHI INTIALIZE)
+# ES5
+# ES6
+# ARRAY METHODS
+# ARROW FUNCTIONS
+# hello=()=>{
+    
+}
+
+# this concept ( different for object method , global variable , function , event passed)
+
+# DOM INNER HTML , QUERY SELECTOR QUERY SELECTOR ALL , CREATE ELEMENT , APPEND
+
+## CALL BACKS==>
+https://codeburst.io/javascript-what-the-heck-is-a-callback-aba4da2deced
+EXAMPLE
+1) api request then getting response and showing error is call back
+
+## PROMISES==>
+
+## asyc js==>
+
+## await
+
+## fetch api
+
+
+

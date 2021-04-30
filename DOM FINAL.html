@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+    <h1 class="heading" id="ss">
+        THIS IS FINAL SHOW DOWN
+    </h1>
+
+    <h1 id="ss">
+        FOR DOM
+    </h1>
+
+    <p>
+        HELLO WORLD , I AM TAYYAB ASLAM.
+    </p>
+
+<p>
+    THIS IS ANOTHHER PARAGRAPH.
+</p>
+
+
+<p>MAGIC WILL HAPPEN BELL0W</p>
+<button onclick="hello()">PRESS to see magic</button>
+
+<div id="a">
+
+</div>
+<button onclick="hello2()">PRESS to hide magic</button>
+<P>MAGIC WILL HAPPEN UP</P>
+
+<p style="color: red;">GET THE ELEMENT USING CLASSNAME , ID and TAG NAME </p>
+    <script>
+        //
+        // document.getElementsByTagName('h1').style.color="red";
+        //console.log(a);
+       var a=document.getElementById('ss');
+       a.style.color="blue";
+    </script>
+
+    <script>
+        //QUERY SELECTIOR
+
+     var b=document.querySelectorAll('p');
+     console.log(b);
+      b[0].style.backgroundColor="green";  
+      b[1].style.backgroundColor="red";  
+    </script>
+
+<script>
+    //QUERY SELECTIOR
+
+
+</script>
+
+<script>
+    function hello(){
+
+        var e=document.querySelector('#a');
+        e.innerHTML="<P>HELLO I AM MAGIN</P>";
+    }
+
+    hello2=()=>{
+        document.getElementById('a').innerHTML="";
+
+    }
+</script>
+
+<button onclick="addmore()">PRESS to see magic</button>
+
+<p style="color: red;">PARENT AND CHILD MANUPULATION STUFF </p>
+
+<div  style="background-color: silver;" id="aa">
+<h1 id="cc">HEADING</h1>
+
+<ol id="bb">
+    <li>ONE</li>
+    <li>TWO</li>
+    <li>THREE</li>
+</ol>
+
+</div>
+
+<script>
+document.getElementById('cc').parentElement.style.color="darkblue";
+</script>
+
+<script>
+console.log(document.getElementById('aa'));
+</script>
+
+<p style="color: red;">CREATING NEW STUF USING DOM </p>
+
+<script>
+    //creating new thing    
+    // var mydiv=document.createElement('div');
+    //  mydiv.id='div1';
+    // var mytext=document.createTextNode('HELLO THIS IS MY DIV BY DOM');
+    // mydiv.append(mytext);
+
+
+</script>
+
+<script>
+    addmore=()=>{
+    var mydiv1=document.createElement('li');
+     mydiv1.id='div2';
+    var mytext1=document.createTextNode('HELLO WORLD');
+    mydiv1.append(mytext1);
+    //mydiv1.style.backgroundColor="pink";
+
+    var ll=document.getElementById('bb');
+    ///document.body.append(mydiv1);
+    ll.append(mydiv1);
+}
+
+</script>
+
+
+<p style="color: red;">EVENT LISTNERS</p>
+
+<button id="btn">EVENT LISTNERS WORK</button>
+<br><br><br>
+<form>
+    
+    <input type="text" id="text"><br>
+    <input type="submit" >
+  </form>
+
+  <div id="tyb"></div>
+  <br><br><br><br><br><br>
+<script>
+var eve=document.getElementById('btn');
+eve.addEventListener('mouseenter',runEvent);
+
+
+var eve=document.getElementById('text');
+eve.addEventListener('keyup',runEvent);
+
+function runEvent(e){
+    //console.log(e.clientX);
+
+console.log(e.target.value);
+var tyb=document.getElementById('tyb');
+var val=e.target.value;
+
+tyb.innerHTML='<h1>'+val+'</h1>';
+}
+</script>
+
+
+
+<button id="ag">PRESS ME</button>
+
+
+<script>
+var again=document.querySelector('#ag');
+again.addEventListener('click',fire);
+
+ function fire(){
+
+    var mydiv1=document.createElement('div');
+     mydiv1.id='div2';
+    var mytext1=document.createTextNode('HELLO WORLD');
+    body.append(mytext1);
+    //mydiv1.style.backgroundColor="pink";
+
+  
+ }
+</script>
+<hr><hr>
+
+<div style="background-color: aquamarine;height: 250px;">
+    <form id="dat">
+    
+        <input type="text" id="info" ><br>
+        <input type="submit" value="submit" id="o" >
+      </form>
+
+      <ol id="list">
+
+      </ol>
+      <button id="ww" onclick="clearme()">
+      CLEAR
+      </button>
+</div>
+
+<script>
+    var dat=document.getElementById('dat');
+   
+    dat.addEventListener('submit',adding);
+
+
+    function adding(e){
+    e.preventDefault();
+   
+var newItem = document.getElementById('info').value;
+var li = document.createElement('li');
+ // Add text node with input value
+  li.appendChild(document.createTextNode(newItem));
+ var pol = document.getElementById('list');
+  pol.append(li);
+
+//    dd.append(vall);
+
+    }
+    
+
+    function clearme(){
+        var n = document.getElementById('list');
+       
+        n.remove();
+    }
+</script>
+
+<br><br><br>
+<form id="addForm" class="form-inline mb-3">
+    <input type="text" class="form-control mr-2" id="item">
+    <input type="submit" class="btn btn-dark" value="Submit">
+  </form>
+  <ul id="items" class="list-group">
+<li>one</li>      
+</ul>
+
+
+  <script>
+      var form = document.getElementById('addForm');
+var itemList = document.getElementById('items');
+form.addEventListener('submit', addItem);
+function addItem(e){
+  e.preventDefault();
+
+  // Get input value
+  var newItem = document.getElementById('item').value;
+
+  // Create new li element
+  var li = document.createElement('li');
+  // Add class
+  li.className = 'list-group-item';
+  // Add text node with input value
+  li.appendChild(document.createTextNode(newItem));
+
+  // Create del button element
+  var deleteBtn = document.createElement('button');
+
+  // Add classes to del button
+  deleteBtn.className = 'btn btn-danger btn-sm float-right delete';
+
+  // Append text node
+  deleteBtn.appendChild(document.createTextNode('X'));
+
+  // Append button to li
+  li.appendChild(deleteBtn);
+
+  // Append li to list
+  itemList.appendChild(li);
+}
+
+
+  </script>
+
+<br><bR>
+    </body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<P>CALL BACK FUNCTIONS</p>
+
+<script>
+    
+function cal(a,b,callback){
+
+    c=a+b;
+
+console.log(c);
+
+    callback(c);
+}
+
+function dis(num){
+
+    console.log(num+1);
+}
+
+
+function ply(num){
+
+console.log(num);
+}
+
+cal(4,5,dis);
+
+//ANOTHER WAY WOTH ANONYMOUS FUNCTION
+
+cal(2,2,function polo(){
+    console.log('i am a anonyous function');
+});
+
+
+</script>
+
+
+<p>PROMISES</p>
+
+<script>
+
+let pr=new Promise((resolve,reject)=>{
+let a  =1+5;
+if(a==6){
+    resolve('yes ( i am resolve)');
+}
+else{
+    reject('no');
+}
+});
+
+pr.then((msg)=>{
+    console.log(msg);
+}).catch((msg)=>{
+console.log(msg);
+});
+
+// pr.then((msg)=>{
+//     console.log(msg);
+
+// })
+
+// pr.catch((msg)=>{
+//     console.log(msg);
+// });
+</script>
+
+
+<p>ARROW FUNCTION</P>
+
+<script>
+
+
+class Person{
+    constructor(name,age){
+        this.name=name;
+        this.age=age;
+    }
+
+ yoloo(){
+    var pp=this.name;
+    console.log('normal='+pp);
+}
+
+zolo=()=>{
+    var kk=this.name;
+    console.log('arrow='+kk);
+}
+
+}
+
+
+var p1=new Person('tayyab',23);
+p1.yoloo();
+p1.zolo();
+
+</script>
+
+<hr><hr>
+<p>FORM HANDLING AND EVENTS</p>
+<form id="myForm" >
+
+    <!-- First name: <input type="text" id="m" name="fname"  > -->
+    <select name="status" id="m" oninput="myFun()">
+        <option>select--</option>
+        <option>like</option>
+        <option>dislike</option>
+</select>
+    <!-- <input type="submit"> -->
+</form>
+
+<script>
+    var m=document.getElementById("m");
+    //m.value='tayyab';
+    // m.type='checkbox';
+
+ function myFun(){    
+          document.getElementById("myForm").submit();
+     }
+   
+</script>
+
+<hr><hr>
+<p>ARRAY METHODS</p>
+<script>
+    //the are strings actually
+var arr1='hello how r u ?';
+var arr2='my dear world';
+var arr3='i am missing you'
+
+var myar=["tayyab","john","mark","sia"];
+console.log(arr1.concat(arr2,arr3));
+
+console.log(myar.length);
+
+myar.push('extra entry');
+myar.forEach(c);
+
+function c(e){
+console.log(e.name);
+    //alert(e.target);
+}
+
+
+var myara=["apple","orange","mango","grapes","grapes"];
+let result=myara.filter(item => item == 'grapes');
+console.log(result);
+</script>
+<hr><hr>
+<p>MAPS</p>
+
+<script>
+    var numbers = [4, 9, 16, 25];
+    let ans=numbers.map(Math.sqrt);
+    console.log(ans);
+</script>
+
+<p>API FETCHING</p>
+<!-- <script>
+fetch('http://localhost:8080/api/ngo.php')
+.then(res => res.json())
+.then(json => console.lo(json.forEach(c)));
+</script> -->
+<hr><hr>
+<p>transvery media video on </p>
+
+<div id="data">div hre</div>
+
+</div>
+<script>
+const students=[
+    {name:"tayyab"},
+    {name:"lilly"}
+];
+console.log(students);
+
+var di=document.getElementById('data');
+console.log(data);
+
+function getStu(){
+setTimeout(()=>{
+
+  let output='';
+    students.forEach((post)=>{
+       output+=`<li>${post.name}</li>`;
+     });
+
+// document.body.innerHTML=output;
+di.body.innerHTML=output;
+    },3000);
+
+}//function bracket
+
+//getStu();
+
+
+// function crestu(post,callback){
+// setTimeout(()=>{
+// students.push(post);
+// },1000);
+
+// callback();
+
+
+// }
+
+
+// crestu({name:'hartimm'},getStu);
+///
+
+function createStudent(post){
+    return new Promise((resolve,reject)=>{
+
+students.push(post);
+
+var err=false;
+
+if(!err){
+    resolve();
+}else{
+    reject();
+}
+    }
+
+
+    );
+}
+
+async function yolo(){
+
+   await createStudent({name:'nico nico'}).then(getStu).catch();
+}
+
+yolo();
+
+
+
+
+
+
+</script>
+
+<button onclick="test(this)">
+    TEST ME
+</button>
+
+<script>
+    function test(e){
+        e.remove();
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  <style></style>
+</head>
+<body>
+
+<script>
+
+  //START JS LEARNING
+
+//////CONSOLE , VAR , LET , CONST
+
+
+    console.log('hello');
+    console.error('its a error');
+
+    var tyb='k.o.o.l';
+    const yolo='yolooo';
+    let age=15;
+
+    age=10;
+
+    
+///concetination
+    console.log('i am '+tyb);
+
+//templeting
+    const text='i am ${tyb}';
+    
+
+    console.log(tyb.length);
+
+
+    console.log(tyb.toUpperCase());
+
+
+    //SPLIT ACCORDING TO DIVIDER IN IT
+    console.log(tyb.split('.'));
+
+//ARRAY
+
+    const lol=['tyb','aslam'];
+   
+
+    lol.push('pak');
+    lol.push('tayyab aslam');
+    lol.pop();
+    lol.unshift('first ');
+
+
+
+
+    console.log(lol);
+
+//object
+
+  const person={
+
+
+    name:'tayyab',
+    age:22,
+    address :{
+      house:679
+    }
+
+  }
+
+  console.log(person.address.house);
+
+  console.log(person.name);
+
+
+///JSON
+
+
+const people=[
+{
+name:'tayyab'
+},
+
+{
+name:"ali"
+},
+{
+  name:"hamza"
+}
+];
+
+console.log(people[2]);
+
+
+//const jsoon=json.stringify(people);
+
+//console.log(jsonn);
+
+/////TERNARY OPERATOR
+
+
+xyz=10;
+
+const color= xyz>5?'GREEN':"RED";
+
+console.log(color);
+
+
+///////////////JSON
+
+
+const variable={
+
+"name":"tayyab",
+"age":"ten"
+
+}
+console.log(variable);
+
+//////////OOP
+
+function man(first,last){
+
+  this.first=first;
+this.last=last;
+
+}
+
+
+
+const man1=new man();
+const man2=new man();
+
+
+man1.first='jin';
+
+console.log(man1);
+
+
+
+console.log(document.getElementById('hi'));
+
+
+
+
+   //////////////////////////////////////////////////END JS LEARNING//////////////////////////////////////////////////////
+    </script>
+
+
+
+
+<!---GET THE VARIABLE OF JS AND PRINT IN HTML-->
+  <h1>
+    <script>
+    document.write(person.address.house);
+    </script>
+ </h1>
+
+ <p>
+   <script>
+     for(i=0;i<=3;i++){
+   document.write(lol[i]);
+     }
+   </script>
+ </p>
+
+
+ <p>
+    <script>
+    document.write(lol[2]);
+    </script>
+  </p>
+ 
+  <p>
+      <script>
+      document.write(variable.name);
+      </script>
+    </p>
+
+
+
+
+    <h1 id="hi">
+
+      HELLO I AM A DOM
+    </h1>
+</body>
+</html>
